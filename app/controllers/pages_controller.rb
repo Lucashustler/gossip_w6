@@ -8,10 +8,9 @@ class PagesController < ApplicationController
   def welcome
     puts "#" * 60
     puts "Ceci est le params"
-    @fn = params[:first_name]
+    @fn = params[:user_first_name]
   end
 
-  def home
-    
-  end
+  
+
 end

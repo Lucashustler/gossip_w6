@@ -1,0 +1,10 @@
+<h1>Welcome to the Gossip Project Homepage</h1>
+
+<h2>Gossips :</h2>
+
+<% @gossips.each do |gossip| %>
+    <h3><%= gossip.title %></h3>
+    <h3><%= gossip.user.first_name %></h3>
+    <%= link_to "Afficher le potin", gossip_path(gossip.id) %>
+<% end %>
+
