@@ -1,8 +1,8 @@
-<h1>Welcome to the Gossip Project Homepage</h1>
+<h1 class="title-index-gossips">Welcome to the Gossip Project</h1>
 
-<h2>Gossips :</h2>
+<h2 class="title-index-gossips1">Gossips :</h2>
 
-<a href="<%=new_gossip_path%>" class="btn btn-success">Create Gossip</a>
+<a href="<%=new_gossip_path%>" class="btn-create-gossip">Create Gossip</a>
 
 
 <div class="container">
@@ -14,7 +14,7 @@
           <p class="card-text"><%=gossip.user.first_name%></p>
           <a href="<%=gossip_path(gossip.id)%>" class="btn-card">Show</a>
           <a href="<%=edit_gossip_path(gossip.id)%>"  class="btn-card">Edit</a>
-          <a href="<%=gossip_path(gossip.id)%>" class="btn btn-card" data-method="DELETE">Delete</a>
+          <a href="<%=gossip_path(gossip.id)%>" class="btn-card" data-method="DELETE">Delete</a>
           <% end %>
         </div>
       </div>

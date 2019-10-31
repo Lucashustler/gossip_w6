@@ -8,3 +8,56 @@ h2 {
 }
 
 
+.nav-link-right {
+    position: relative;
+    left: 1070px;
+    top: 7px;
+    padding-right: 20px;
+    color: grey;
+}
+
+.nav-link-right:hover {
+    text-decoration: none;
+    color:#454545;
+    size:20px; 
+}
+
+
+
+
+
+
+
+.title-index-gossips {
+    position: relative;
+    top: 50px; 
+}
+
+.title-index-gossips1 {
+    position: relative;
+    top: 100px; 
+}
+
+.btn-create-gossip {
+    background-color: greenyellow;
+    color: grey;
+    padding: 15px;
+    border-radius: 10px;
+    position: relative;
+    left: 900px;
+}
+
+.btn-create-gossip:hover {
+    text-decoration: none;
+    color:#454545;
+    background-color: #B3FF41;
+}
+
+.btn-card {
+    color: lightgrey; 
+}
+
+.btn-card:hover {
+    color:#454545; 
+    text-decoration: none;
+}
