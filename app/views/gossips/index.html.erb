@@ -2,9 +2,26 @@
 
 <h2>Gossips :</h2>
 
-<% @gossips.each do |gossip| %>
-    <h3><%= gossip.title %></h3>
-    <h3><%= gossip.user.first_name %></h3>
-    <%= link_to "Afficher le potin", gossip_path(gossip.id) %>
-<% end %>
+<a href="<%=new_gossip_path%>" class="btn btn-success">Create Gossip</a>
+
+
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+  <% @gossips.each do |gossip| %>
+    <h5 class="card-title"><%=gossip.title%></h5>
+    <h6 class="card-subtitle mb-2 text-muted"><%=gossip.user.first_name%></h6>
+    <a href="<%=gossip_path(gossip.id)%>" class="btn btn-primary">Show</a>
+    <a href="<%=edit_gossip_path(gossip.id)%>"  class="btn btn-primary">Edit</a>
+    <a href="<%=gossip_path(gossip.id)%>" class="btn btn-danger" data-method="DELETE">Delete</a>
+    <% end %>
+  </div>
+</div>
+
+
+    
+
+
+<%# class="btn btn-primary"  %>
+<%# <%= link_to "Afficher le potin", gossip_path(gossip.id) %>
+
 

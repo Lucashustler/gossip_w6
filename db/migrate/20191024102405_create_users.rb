@@ -6,6 +6,7 @@ class CreateUsers < ActiveRecord::Migration[5.0]
       t.text :description
       t.string :email
       t.integer :age
+      t.string :password
 
       # 1-N association with cities table
       t.belongs_to :city, index: true

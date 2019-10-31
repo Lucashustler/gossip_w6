@@ -4,8 +4,9 @@ class User < ApplicationRecord
   validates :description, presence: true
   validates :email, presence: true
   validates :age, presence: true
+  validates :password, presence: true
 
-  belongs_to :city
+  belongs_to :city, optionnal: true
   # 1-N association with gossips table
   has_many :gossips
 
@@ -25,4 +26,7 @@ class User < ApplicationRecord
 
   # 1-N associations with likes
   has_many :likes
+
+  # bcrypt is handling password
+  #has_secure_password
 end

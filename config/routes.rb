@@ -8,5 +8,7 @@ Rails.application.routes.draw do
     get 'welcome/:user_first_name', to: 'pages#welcome'
 
     resources :gossips
+    resources :users
+    resources :sessions, only: [:new, :create, :destroy]
   
   end

@@ -20,9 +20,10 @@ end
   email = Faker::Internet.unique.safe_email(name: name)
   name = name.split(' ')
   age = rand(16..70)
+  password = Faker::Artist.name
   User.create(first_name: name[0], last_name: name[1],
   description: description, email: email, age: age,
-  city_id: City.all.sample.id)
+  city_id: City.all.sample.id, password: password)
 end
 
 # getting to the gossips (requires users)
@@ -88,3 +89,4 @@ end
   rand > 0.5 ? commentable = Gossip.all.sample : commentable = Comment.all.sample
   Comment.create(user_id: User.all.sample.id, content: content, commentable: commentable)
 end
+
