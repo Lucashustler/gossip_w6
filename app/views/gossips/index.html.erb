@@ -5,18 +5,21 @@
 <a href="<%=new_gossip_path%>" class="btn btn-success">Create Gossip</a>
 
 
-<div class="card" style="width: 18rem;">
-  <div class="card-body">
-  <% @gossips.each do |gossip| %>
-    <h5 class="card-title"><%=gossip.title%></h5>
-    <h6 class="card-subtitle mb-2 text-muted"><%=gossip.user.first_name%></h6>
-    <a href="<%=gossip_path(gossip.id)%>" class="btn btn-primary">Show</a>
-    <a href="<%=edit_gossip_path(gossip.id)%>"  class="btn btn-primary">Edit</a>
-    <a href="<%=gossip_path(gossip.id)%>" class="btn btn-danger" data-method="DELETE">Delete</a>
-    <% end %>
+<div class="container">
+  <div class="row">
+    <% @gossips.each do |gossip| %>
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title"><%=gossip.title%></h5>
+          <p class="card-text"><%=gossip.user.first_name%></p>
+          <a href="<%=gossip_path(gossip.id)%>" class="btn-card">Show</a>
+          <a href="<%=edit_gossip_path(gossip.id)%>"  class="btn-card">Edit</a>
+          <a href="<%=gossip_path(gossip.id)%>" class="btn btn-card" data-method="DELETE">Delete</a>
+          <% end %>
+        </div>
+      </div>
   </div>
 </div>
-
 
     
 

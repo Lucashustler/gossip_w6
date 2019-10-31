@@ -9,14 +9,17 @@ class UsersController < ApplicationController
     end
 
     def create
-        @user = User.new(title: params['email'], content: params['password'], user_id: 1)
+        @user = User.new(first_name: params['first_name'], last_name: params['last_name'], 
+        email: params['email'], password: params['password'])
+
         if @user.save
-          redirect_to root_path
+            flash[:success] = "Account created"
+            puts "#"*60
+            puts "User created"
+            redirect_to root_path
         else
-          redirect_to new_gossip_path
+          redirect_to new_user_path
         end
     end
-
-
 
 end
