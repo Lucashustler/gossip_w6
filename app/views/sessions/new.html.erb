@@ -1,0 +1,23 @@
+<h1>Hello</h1>
+
+<%= form_tag url_for(action: 'create'), method: "post" do %>
+​
+  <%= label_tag 'E-mail : ' %>
+  <%= text_field_tag 'email' %>
+  <br /> <br />
+​
+  <%= label_tag 'Password : ' %>
+  <%= text_area_tag 'password' %>
+  <br /> <br />
+​
+  <%= submit_tag "Log In", class: "btn btn-secondary " %>
+​
+<% end %>
+
+<% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice] %></div>
+<% end %>
+
+<% if flash[:danger] %>
+    <div class="danger"><%= flash[:danger] %></div>
+<% end %>

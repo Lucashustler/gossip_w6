@@ -92,10 +92,10 @@ ActiveRecord::Schema.define(version: 20191024184323) do
     t.text     "description"
     t.string   "email"
     t.integer  "age"
-    t.string   "password"
+    t.string   "password_digest"
     t.integer  "city_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
     t.index ["city_id"], name: "index_users_on_city_id", using: :btree
   end
 
